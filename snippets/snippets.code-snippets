@@ -1,0 +1,173 @@
+{
+	"Vue3 Setup Script": {
+		"prefix": "v3setup",
+		"body": [
+			"<script setup>",
+			"import { ref, reactive } from 'vue'",
+			"",
+			"$1",
+			"</script>",
+			"",
+			"<template>",
+			"  <div>",
+			"    $2",
+			"  </div>",
+			"</template>"
+		],
+		"description": "Vue3 setup script template"
+	},
+	"Vue3 Setup Script with TypeScript": {
+		"prefix": "v3setup-ts",
+		"body": [
+			"<script setup lang=\"ts\">",
+			"import { ref, reactive } from 'vue'",
+			"",
+			"interface Props {",
+			"  $1",
+			"}",
+			"",
+			"const props = defineProps<Props>()",
+			"$2",
+			"</script>",
+			"",
+			"<template>",
+			"  <div>",
+			"    $3",
+			"  </div>",
+			"</template>"
+		],
+		"description": "Vue3 setup script template with TypeScript"
+	},
+	"Vue3 Ref": {
+		"prefix": "v3ref",
+		"body": [
+			"const ${1:name} = ref($2)"
+		],
+		"description": "Vue3 ref declaration"
+	},
+	"Vue3 Reactive": {
+		"prefix": "v3reactive",
+		"body": [
+			"const ${1:state} = reactive({",
+			"  $2",
+			"})"
+		],
+		"description": "Vue3 reactive declaration"
+	},
+	"Vue3 Computed": {
+		"prefix": "v3computed",
+		"body": [
+			"const ${1:name} = computed(() => {",
+			"  return ${2}",
+			"})"
+		],
+		"description": "Vue3 computed property"
+	},
+	"Vue3 Watch": {
+		"prefix": "v3watch",
+		"body": [
+			"watch(${1:source}, (newValue, oldValue) => {",
+			"  ${2}",
+			"})"
+		],
+		"description": "Vue3 watch"
+	},
+	"Vue3 Watch Effect": {
+		"prefix": "v3watcheffect",
+		"body": [
+			"watchEffect(() => {",
+			"  ${1}",
+			"})"
+		],
+		"description": "Vue3 watchEffect"
+	},
+	"Vue3 Define Props": {
+		"prefix": "v3props",
+		"body": [
+			"const props = defineProps({",
+			"  ${1:propName}: {",
+			"    type: ${2:String},",
+			"    required: ${3:true},",
+			"    default: ${4:null}",
+			"  }",
+			"})"
+		],
+		"description": "Vue3 define props"
+	},
+	"Vue3 Define Emits": {
+		"prefix": "v3emits",
+		"body": [
+			"const emit = defineEmits(['${1:update}'])"
+		],
+		"description": "Vue3 define emits"
+	},
+	"Vue3 onMounted": {
+		"prefix": "v3mounted",
+		"body": [
+			"onMounted(() => {",
+			"  ${1}",
+			"})"
+		],
+		"description": "Vue3 onMounted hook"
+	},
+	"Vue3 onBeforeMount": {
+		"prefix": "v3beforemount",
+		"body": [
+			"onBeforeMount(() => {",
+			"  ${1}",
+			"})"
+		],
+		"description": "Vue3 onBeforeMount hook"
+	},
+	"Vue3 onUnmounted": {
+		"prefix": "v3unmounted",
+		"body": [
+			"onUnmounted(() => {",
+			"  ${1}",
+			"})"
+		],
+		"description": "Vue3 onUnmounted hook"
+	},
+	"Vue3 v-for": {
+		"prefix": "v3for",
+		"body": [
+			"v-for=\"${1:item} in ${2:items}\" :key=\"${1:item}.${3:id}\""
+		],
+		"description": "Vue3 v-for directive"
+	},
+	"Vue3 v-if": {
+		"prefix": "v3if",
+		"body": [
+			"v-if=\"${1:condition}\""
+		],
+		"description": "Vue3 v-if directive"
+	},
+	"Vue3 @click": {
+		"prefix": "v3click",
+		"body": [
+			"@click=\"${1:handleClick}\""
+		],
+		"description": "Vue3 click event handler"
+	},
+	"Vue3 Async Setup": {
+		"prefix": "v3async",
+		"body": [
+			"const ${1:data} = ref(null)",
+			"const ${2:loading} = ref(false)",
+			"const ${3:error} = ref(null)",
+			"",
+			"const fetch${4:Data} = async () => {",
+			"  ${2:loading}.value = true",
+			"  try {",
+			"    const response = await ${5:apiCall}",
+			"    ${1:data}.value = response",
+			"  } catch (e) {",
+			"    ${3:error}.value = e",
+			"  } finally {",
+			"    ${2:loading}.value = false",
+			"  }",
+			"}"
+		],
+		"description": "Vue3 async data fetching template"
+	}
+}

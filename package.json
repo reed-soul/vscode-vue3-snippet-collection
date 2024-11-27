@@ -1,0 +1,43 @@
+{
+  "name": "vue3-snippets-pro",
+  "displayName": "Vue 3 Snippets Pro",
+  "description": "Professional Vue 3 Snippets with Composition API and TypeScript support",
+  "version": "1.0.0",
+  "publisher": "Your Publisher ID",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "vue",
+    "vue3",
+    "vuejs",
+    "composition-api",
+    "typescript",
+    "snippets"
+  ],
+  "icon": "images/logo.png",
+  "galleryBanner": {
+    "color": "#41B883",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YourUsername/vue3-snippets-pro"
+  },
+  "bugs": {
+    "url": "https://github.com/YourUsername/vue3-snippets-pro/issues"
+  },
+  "homepage": "https://github.com/YourUsername/vue3-snippets-pro#readme",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "vue",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  },
+  "license": "MIT"
+}
