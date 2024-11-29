@@ -1,0 +1,30 @@
+{
+  "Vue 3 v-for": {
+    "prefix": "v3for",
+    "body": [
+      "v-for=\"${1:item} in ${2:items}\" :key=\"${3:item.id}\""
+    ],
+    "description": "v-for 循环指令"
+  },
+  "Vue 3 v-if": {
+    "prefix": "v3if",
+    "body": [
+      "v-if=\"${1:condition}\""
+    ],
+    "description": "v-if 条件指令"
+  },
+  "Vue 3 v-model": {
+    "prefix": "v3model",
+    "body": [
+      "v-model=\"${1:value}\""
+    ],
+    "description": "v-model 双向绑定"
+  },
+  "Vue 3 @click": {
+    "prefix": "v3click",
+    "body": [
+      "@click=\"${1:handleClick}\""
+    ],
+    "description": "@click 事件处理"
+  }
+} 

@@ -3,9 +3,28 @@
   "displayName": "Vue 3 Snippets Pro",
   "description": "Professional Vue 3 Snippets with Composition API and TypeScript support",
   "version": "1.0.0",
-  "publisher": "Your Publisher ID",
+  "publisher": "lushiqiang",
+  "author": {
+    "name": "lushiqiang",
+    "email": "lsqup0702@hotmail.com"
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "test": "node ./out/test/runTest.js --extensionDevelopmentPath=${workspaceFolder} --extensionTestsPath=${workspaceFolder}/out/test/suite/index --enable-proposed-api --install-extension=${workspaceFolder}",
+    "test:debug": "node --inspect-brk ./out/test/runTest.js --extensionDevelopmentPath=${workspaceFolder} --extensionTestsPath=${workspaceFolder}/out/test/suite/index"
+  },
+  "activationEvents": [
+    "onStartupFinished",
+    "onLanguage:vue",
+    "onLanguage:typescript",
+    "onLanguage:javascript"
+  ],
   "engines": {
-    "vscode": "^1.60.0"
+    "vscode": "^1.80.0"
   },
   "categories": [
     "Snippets"
@@ -25,19 +44,264 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/YourUsername/vue3-snippets-pro"
+    "url": "https://github.com/reed-soul/vscode-vue3-snippet-collection"
   },
   "bugs": {
-    "url": "https://github.com/YourUsername/vue3-snippets-pro/issues"
+    "url": "https://github.com/reed-soul/vscode-vue3-snippet-collection/issues"
   },
-  "homepage": "https://github.com/YourUsername/vue3-snippets-pro#readme",
+  "homepage": "https://github.com/reed-soul/vscode-vue3-snippet-collection#readme",
   "contributes": {
     "snippets": [
       {
-        "language": "vue",
-        "path": "./snippets/snippets.code-snippets"
+        "language": [
+          "vue",
+          "typescript",
+          "javascript",
+          "html",
+          "jsx",
+          "tsx"
+        ],
+        "path": "./snippets/base.code-snippets"
+      },
+      {
+        "language": [
+          "vue",
+          "typescript",
+          "javascript"
+        ],
+        "path": "./snippets/composition.code-snippets"
+      },
+      {
+        "language": [
+          "vue"
+        ],
+        "path": "./snippets/lifecycle.code-snippets"
+      },
+      {
+        "language": [
+          "vue"
+        ],
+        "path": "./snippets/directives.code-snippets"
+      },
+      {
+        "language": [
+          "vue",
+          "typescript",
+          "javascript"
+        ],
+        "path": "./snippets/pinia.code-snippets"
+      },
+      {
+        "language": [
+          "vue",
+          "typescript",
+          "javascript"
+        ],
+        "path": "./snippets/composables.code-snippets"
+      }
+    ],
+    "configuration": {
+      "title": "Vue 3 Snippets Pro",
+      "properties": {
+        "vue3SnippetsPro.enableTypeScript": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable TypeScript snippets"
+        },
+        "vue3SnippetsPro.enablePreview": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable snippet preview in IntelliSense"
+        },
+        "vue3SnippetsPro.showExamples": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show example usage in snippet documentation"
+        },
+        "vue3SnippetsPro.documentationLinks": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show Vue.js documentation links in snippet documentation"
+        },
+        "vue3SnippetsPro.style": {
+          "type": "object",
+          "description": "Style related configurations",
+          "properties": {
+            "defaultStyle": {
+              "type": "string",
+              "enum": [
+                "css",
+                "scss",
+                "less"
+              ],
+              "default": "css",
+              "description": "Default style language in snippets"
+            },
+            "scopedByDefault": {
+              "type": "boolean",
+              "default": true,
+              "description": "Add scoped attribute to style tags by default"
+            }
+          }
+        },
+        "vue3SnippetsPro.template": {
+          "type": "object",
+          "description": "Template related configurations",
+          "properties": {
+            "defaultTag": {
+              "type": "string",
+              "enum": [
+                "template",
+                "div"
+              ],
+              "default": "template",
+              "description": "Default root tag in template"
+            },
+            "attributeCase": {
+              "type": "string",
+              "enum": [
+                "kebab-case",
+                "camelCase"
+              ],
+              "default": "kebab-case",
+              "description": "Case style for attributes in template"
+            }
+          }
+        },
+        "vue3SnippetsPro.script": {
+          "type": "object",
+          "description": "Script related configurations",
+          "properties": {
+            "defaultApiStyle": {
+              "type": "string",
+              "enum": [
+                "composition",
+                "options"
+              ],
+              "default": "composition",
+              "description": "Default API style (Composition API or Options API)"
+            },
+            "importStyle": {
+              "type": "string",
+              "enum": [
+                "named",
+                "default"
+              ],
+              "default": "named",
+              "description": "Import style for Vue modules"
+            },
+            "semicolon": {
+              "type": "boolean",
+              "default": true,
+              "description": "Add semicolons in script"
+            }
+          }
+        },
+        "vue3SnippetsPro.formatting": {
+          "type": "object",
+          "description": "Code formatting configurations",
+          "properties": {
+            "indentSize": {
+              "type": "number",
+              "default": 2,
+              "description": "Number of spaces for indentation"
+            },
+            "quotes": {
+              "type": "string",
+              "enum": [
+                "single",
+                "double"
+              ],
+              "default": "single",
+              "description": "Quote style in snippets"
+            }
+          }
+        },
+        "vue3SnippetsPro.features": {
+          "type": "object",
+          "description": "Feature toggles",
+          "properties": {
+            "enablePinia": {
+              "type": "boolean",
+              "default": true,
+              "description": "Enable Pinia store snippets"
+            },
+            "enableRouter": {
+              "type": "boolean",
+              "default": true,
+              "description": "Enable Vue Router snippets"
+            },
+            "enableI18n": {
+              "type": "boolean",
+              "default": true,
+              "description": "Enable Vue I18n snippets"
+            },
+            "enableTests": {
+              "type": "boolean",
+              "default": true,
+              "description": "Enable test-related snippets"
+            }
+          }
+        },
+        "vue3SnippetsPro.customization": {
+          "type": "object",
+          "description": "Custom snippet configurations",
+          "properties": {
+            "fileNameCase": {
+              "type": "string",
+              "enum": [
+                "kebab-case",
+                "PascalCase"
+              ],
+              "default": "PascalCase",
+              "description": "Case style for generated file names"
+            },
+            "componentPrefix": {
+              "type": "string",
+              "default": "",
+              "description": "Prefix for component names (e.g., 'App')"
+            }
+          }
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "vue3snippets.showSnippets",
+        "title": "Vue 3: Show All Available Snippets"
+      },
+      {
+        "command": "vue3snippets.searchSnippets",
+        "title": "Vue 3: Search Snippets"
+      },
+      {
+        "command": "vue3snippets.showStats",
+        "title": "Vue 3: Show Snippet Usage Statistics"
+      },
+      {
+        "command": "vue3snippets.resetStats",
+        "title": "Vue 3: Reset Snippet Usage Statistics"
+      },
+      {
+        "command": "vue3snippets.validateSnippets",
+        "title": "Vue 3: Validate All Snippets"
       }
     ]
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.80.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@vscode/test-electron": "^2.3.8",
+    "eslint": "^8.54.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.5"
+  },
+  "main": "./out/extension.js",
+  "packageManager": "pnpm@9.14.4"
 }

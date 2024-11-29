@@ -1,0 +1,27 @@
+{
+  "Vue 3 Composable": {
+    "prefix": "v3composable",
+    "body": [
+      "export function use${1:Feature}() {",
+      "\t// 状态",
+      "\tconst ${2:state} = ref(${3:initialValue})",
+      "",
+      "\t// 方法",
+      "\tfunction ${4:method}() {",
+      "\t\t${5:// 实现逻辑}",
+      "\t}",
+      "",
+      "\t// 生命周期钩子",
+      "\tonMounted(() => {",
+      "\t\t${6:// 初始化逻辑}",
+      "\t})",
+      "",
+      "\treturn {",
+      "\t\t${2:state},",
+      "\t\t${4:method}",
+      "\t}",
+      "}"
+    ],
+    "description": "创建组合式函数"
+  }
+} 

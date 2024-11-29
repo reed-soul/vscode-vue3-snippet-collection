@@ -1,66 +1,135 @@
 # Vue 3 Snippets Pro
 
-## 简介
-Vue 3 Snippets Pro 是一个为 Vue 3 开发者精心打造的代码片段集合，支持 Composition API 和 TypeScript，旨在提升开发效率和编码体验。
+<p align="center">
+  <img src="images/logo.png" alt="Vue 3 Snippets Pro" width="128" height="128">
+</p>
 
-## 特性
-- 🚀 完整的 Vue 3 Composition API 支持
-- 💪 TypeScript 友好
-- 🎯 智能的代码提示和自动补全
-- 📦 覆盖日常开发所需的所有常用功能
-- 🎨 优雅的代码组织方式
+<p align="center">
+  <a href="https://marketplace.visualstudio.com/items?itemName=lushiqiang.vue3-snippets-pro">
+    <img src="https://img.shields.io/visual-studio-marketplace/v/lushiqiang.vue3-snippets-pro.svg?color=blue&amp;label=VS%20Code%20Marketplace&logo=visual-studio-code" alt="Visual Studio Marketplace Version">
+  </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=lushiqiang.vue3-snippets-pro">
+    <img src="https://img.shields.io/visual-studio-marketplace/d/lushiqiang.vue3-snippets-pro.svg?color=blue" alt="Visual Studio Marketplace Downloads">
+  </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=lushiqiang.vue3-snippets-pro">
+    <img src="https://img.shields.io/visual-studio-marketplace/r/lushiqiang.vue3-snippets-pro.svg?color=blue" alt="Visual Studio Marketplace Rating">
+  </a>
+</p>
 
-## 安装
-在 VS Code 中搜索 "Vue 3 Snippets Pro" 并安装，或者点击[这里](你的插件市场链接)直接安装。
+<p align="center">
+  <a href="README.zh-CN.md">简体中文</a> | English
+</p>
 
-## 代码片段详细说明
+## ✨ Core Features
 
-### 基础模板
+- 🚀 **Enhanced IntelliSense**: Real-time preview, examples, and documentation links
+- 💪 **Complete TypeScript Support**: Built-in type hints and type safety
+- 🎯 **Highly Configurable**: Customize code style and coding conventions
+- 📦 **Rich Snippet Collection**: Covers all common Vue 3 functionalities
+- 🎨 **Elegant Code Organization**: Code structure following best practices
 
-#### `v3setup` - Vue3 基础组件模板
+## 📥 Quick Start
 
-## 代码片段列表
+### Installation
 
-### 基础模板
-| 前缀 | 描述 |
-|------|------|
-| `v3setup` | 创建基础的 Vue 3 组件模板 |
-| `v3setup-ts` | 创建带 TypeScript 支持的 Vue 3 组件模板 |
+1. Open VS Code
+2. Press `Ctrl+P` / `Cmd+P`
+3. Type `ext install lushiqiang.vue3-snippets-pro`
+4. Press Enter
 
-### 组合式 API
-| 前缀 | 描述 |
-|------|------|
-| `v3ref` | 创建 ref 响应式变量 |
-| `v3reactive` | 创建 reactive 响应式对象 |
-| `v3computed` | 创建计算属性 |
-| `v3watch` | 创建监听器 |
-| `v3watcheffect` | 创建响应式副作用 |
+Or search for "Vue 3 Snippets Pro" in VS Code Extensions Marketplace.
 
-### Props 和 Emits
-| 前缀 | 描述 |
-|------|------|
-| `v3props` | 定义组件 props |
-| `v3emits` | 定义组件事件发射器 |
+### Basic Usage
 
-### 生命周期钩子
-| 前缀 | 描述 |
-|------|------|
-| `v3mounted` | onMounted 生命周期钩子 |
-| `v3beforemount` | onBeforeMount 生命周期钩子 |
-| `v3unmounted` | onUnmounted 生命周期钩子 |
+1. Create a new Vue component:
+   - Type `v3setup` and press Tab
+   ```vue
+   <script setup>
+   // Component logic
+   </script>
 
-### 指令和事件
-| 前缀 | 描述 |
-|------|------|
-| `v3for` | v-for 循环指令 |
-| `v3if` | v-if 条件指令 |
-| `v3click` | @click 事件处理 |
+   <template>
+     <div></div>
+   </template>
+   ```
 
-### 异步处理
-| 前缀 | 描述 |
-|------|------|
-| `v3async` | 异步数据获取模板（包含加载状态和错误处理） |
+2. Add reactive variable:
+   - Type `v3ref` and press Tab
+   ```typescript
+   const count = ref(0)
+   ```
 
-## 使用示例
+[View More Examples...](docs/examples.md)
 
-### 创建基础组件
+## 🎯 Snippet Cheat Sheet
+
+### Base Templates
+| Prefix | Description | Example |
+|--------|-------------|---------|
+| `v3setup` | Basic component template | [View Example](#v3setup) |
+| `v3setup-ts` | TypeScript component template | [View Example](#v3setup-ts) |
+
+### Composition API
+| Prefix | Description | Example |
+|--------|-------------|---------|
+| `v3ref` | ref reactive variable | [View Example](#v3ref) |
+| `v3reactive` | reactive object | [View Example](#v3reactive) |
+| `v3computed` | computed property | [View Example](#v3computed) |
+
+[View Full Cheat Sheet](docs/cheatsheet.md)
+
+## ⚙️ Configuration
+
+### Code Style Configuration
+
+```json
+{
+  "vue3SnippetsPro.style": {
+    "defaultStyle": "scss",    // Default style language
+    "scopedByDefault": true    // Add scoped by default
+  },
+  "vue3SnippetsPro.formatting": {
+    "indentSize": 2,          // Number of spaces for indentation
+    "quotes": "single"        // Quote style
+  }
+}
+```
+
+[View Full Configuration Guide](docs/configuration.md)
+
+## 🎯 Pro Tips
+
+1. **Quick View All Snippets**
+   - Press `Ctrl+Shift+P` / `Cmd+Shift+P`
+   - Type "Vue 3: Show All Available Snippets"
+
+2. **Smart IntelliSense**
+   - Type `v3` to see all available snippets
+   - Each snippet comes with live preview and example
+
+3. **Custom Configuration**
+   - Press `Ctrl+,` / `Cmd+,`
+   - Search for "Vue 3 Snippets Pro"
+   - Adjust settings as needed
+
+[View More Tips](docs/tips.md)
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+## 📝 Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for release history.
+
+## 📄 License
+
+[MIT](LICENSE)
+
+## 🌟 Support
+
+If you find this project helpful, please give it a star ⭐️
+
+## 🤔 FAQ
+
+[View FAQ](docs/faq.md)

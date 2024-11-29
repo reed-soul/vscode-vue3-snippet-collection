@@ -1,0 +1,30 @@
+{
+  "Vue 3 Pinia Store": {
+    "prefix": "v3pinia",
+    "body": [
+      "import { defineStore } from 'pinia'",
+      "",
+      "export const use${1:Feature}Store = defineStore('${2:feature}', () => {",
+      "\t// 状态",
+      "\tconst ${3:state} = ref(${4:initialValue})",
+      "",
+      "\t// 计算属性",
+      "\tconst ${5:computed} = computed(() => {",
+      "\t\treturn ${6:value}",
+      "\t})",
+      "",
+      "\t// 操作方法",
+      "\tfunction ${7:action}() {",
+      "\t\t${8:// 实现逻辑}",
+      "\t}",
+      "",
+      "\treturn {",
+      "\t\t${3:state},",
+      "\t\t${5:computed},",
+      "\t\t${7:action}",
+      "\t}",
+      "})"
+    ],
+    "description": "创建 Pinia Store"
+  }
+} 

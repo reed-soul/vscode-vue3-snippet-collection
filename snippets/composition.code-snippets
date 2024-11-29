@@ -1,0 +1,45 @@
+{
+  "Vue 3 Ref": {
+    "prefix": "v3ref",
+    "body": [
+      "const ${1:name} = ref(${2:initialValue})"
+    ],
+    "description": "创建 ref 响应式变量"
+  },
+  "Vue 3 Reactive": {
+    "prefix": "v3reactive",
+    "body": [
+      "const ${1:state} = reactive({",
+      "\t${2:property}: ${3:value}",
+      "})"
+    ],
+    "description": "创建 reactive 响应式对象"
+  },
+  "Vue 3 Computed": {
+    "prefix": "v3computed",
+    "body": [
+      "const ${1:computedValue} = computed(() => {",
+      "\treturn ${2:value}",
+      "})"
+    ],
+    "description": "创建计算属性"
+  },
+  "Vue 3 Watch": {
+    "prefix": "v3watch",
+    "body": [
+      "watch(${1:source}, (newValue, oldValue) => {",
+      "\t${2:// 处理逻辑}",
+      "}${3:, { deep: true }})"
+    ],
+    "description": "创建监听器"
+  },
+  "Vue 3 Watch Effect": {
+    "prefix": "v3watcheffect",
+    "body": [
+      "watchEffect(() => {",
+      "\t${1:// 副作用逻辑}",
+      "})"
+    ],
+    "description": "创建响应式副作用"
+  }
+} 
