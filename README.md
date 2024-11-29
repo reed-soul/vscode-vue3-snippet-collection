@@ -59,7 +59,7 @@ Or search for "Vue 3 Snippets Pro" in VS Code Extensions Marketplace.
    const count = ref(0)
    ```
 
-[View More Examples...](docs/examples.md)
+[View More Examples...](https://github.com/reed-soul/vscode-vue3-snippet-collection/blob/main/docs/examples.md)
 
 ## 🎯 Snippet Cheat Sheet
 

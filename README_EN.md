@@ -5,14 +5,14 @@
 </p>
 
 <p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=lushiqiang.vue3-snippets-pro">
-    <img src="https://img.shields.io/visual-studio-marketplace/v/lushiqiang.vue3-snippets-pro.svg?color=blue&amp;label=VS%20Code%20Marketplace&logo=visual-studio-code" alt="Visual Studio Marketplace Version">
+  <a href="https://marketplace.visualstudio.com/items?itemName=reed-soul.vue3-snippets-pro">
+    <img src="https://img.shields.io/visual-studio-marketplace/v/reed-soul.vue3-snippets-pro.svg?color=blue&amp;label=VS%20Code%20Marketplace&logo=visual-studio-code" alt="Visual Studio Marketplace Version">
   </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=lushiqiang.vue3-snippets-pro">
-    <img src="https://img.shields.io/visual-studio-marketplace/d/lushiqiang.vue3-snippets-pro.svg?color=blue" alt="Visual Studio Marketplace Downloads">
+  <a href="https://marketplace.visualstudio.com/items?itemName=reed-soul.vue3-snippets-pro">
+    <img src="https://img.shields.io/visual-studio-marketplace/d/reed-soul.vue3-snippets-pro.svg?color=blue" alt="Visual Studio Marketplace Downloads">
   </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=lushiqiang.vue3-snippets-pro">
-    <img src="https://img.shields.io/visual-studio-marketplace/r/lushiqiang.vue3-snippets-pro.svg?color=blue" alt="Visual Studio Marketplace Rating">
+  <a href="https://marketplace.visualstudio.com/items?itemName=reed-soul.vue3-snippets-pro">
+    <img src="https://img.shields.io/visual-studio-marketplace/r/reed-soul.vue3-snippets-pro.svg?color=blue" alt="Visual Studio Marketplace Rating">
   </a>
 </p>
 
@@ -30,7 +30,7 @@
 
 1. Open VS Code
 2. Press `Ctrl+P` / `Cmd+P`
-3. Type `ext install lushiqiang.vue3-snippets-pro`
+3. Type `ext install reed-soul.vue3-snippets-pro`
 4. Press Enter
 
 Or search for "Vue 3 Snippets Pro" in VS Code Extensions Marketplace.
