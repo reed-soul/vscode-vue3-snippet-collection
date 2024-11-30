@@ -46,12 +46,51 @@ function packageExtension(version: string) {
     execSync(`vsce package --no-dependencies --out dist/vue3-snippets-pro-${version}.vsix`);
 }
 
-// 发布扩展
-function publishExtension(version: string) {
-    execSync(`vsce publish --packagePath dist/vue3-snippets-pro-${version}.vsix --no-dependencies`);
+// 添加重试函数
+async function retry<T>(
+    fn: () => Promise<T>,
+    retries = 3,
+    delay = 2000,
+    onRetry?: (attempt: number) => void
+): Promise<T> {
+    let lastError: Error;
+    
+    for (let i = 0; i < retries; i++) {
+        try {
+            return await fn();
+        } catch (error) {
+            lastError = error as Error;
+            if (i < retries - 1) {
+                if (onRetry) {
+                    onRetry(i + 1);
+                }
+                await new Promise(resolve => setTimeout(resolve, delay));
+            }
+        }
+    }
+    
+    throw lastError!;
 }
 
-// 主函数
+// 修改发布函数
+async function publishExtension(version: string) {
+    await retry(
+        () => {
+            execSync(
+                `vsce publish --packagePath dist/vue3-snippets-pro-${version}.vsix --no-dependencies`,
+                { stdio: 'inherit' }
+            );
+            return Promise.resolve();
+        },
+        3,
+        5000,
+        (attempt) => {
+            console.log(`Publishing failed, retrying (${attempt}/3)...`);
+        }
+    );
+}
+
+// 修改主函数
 async function main() {
     try {
         const versionType = process.argv[2] as VersionType || 'patch';
@@ -75,8 +114,8 @@ async function main() {
         packageExtension(newVersion);
         console.log('Package created');
         
-        // 6. 发布扩展
-        publishExtension(newVersion);
+        // 6. 发布扩展（使用重试机制）
+        await publishExtension(newVersion);
         console.log('Published successfully');
         
         // 7. 提交变更
