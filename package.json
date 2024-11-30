@@ -2,7 +2,7 @@
   "name": "vue3-snippets-pro",
   "displayName": "Vue 3 Snippets Pro",
   "description": "Professional Vue 3 Snippets with Composition API and TypeScript support",
-  "version": "1.1.1",
+  "version": "1.1.6",
   "publisher": "lushiqiang",
   "author": {
     "name": "lushiqiang",
@@ -16,9 +16,12 @@
     "pretest": "pnpm run compile && pnpm run lint",
     "test": "node ./extension/out/test/runTest.js",
     "clean": "rimraf *.vsix extension/out dist",
-    "release": "tsx scripts/publish.ts",
+    "release": "cross-env HUSKY=0 tsx scripts/publish.ts",
     "release:minor": "tsx scripts/publish.ts minor",
-    "release:major": "tsx scripts/publish.ts major"
+    "release:major": "tsx scripts/publish.ts major",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "changelog:first": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "prepare": "husky install"
   },
   "activationEvents": [
     "onLanguage:vue",
@@ -288,8 +291,10 @@
     ]
   },
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@types/fs-extra": "^11.0.4",
     "@types/glob": "^8.1.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "^20.0.0",
@@ -297,14 +302,16 @@
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@vscode/test-electron": "^2.3.8",
+    "conventional-changelog-cli": "^5.0.0",
     "eslint": "^8.54.0",
+    "fs-extra": "^11.2.0",
     "glob": "^8.1.0",
+    "husky": "^8.0.0",
     "mocha": "^10.2.0",
-    "typescript": "^4.9.5",
     "rimraf": "^5.0.5",
     "tsx": "^4.7.0",
-    "@types/fs-extra": "^11.0.4",
-    "fs-extra": "^11.2.0"
+    "typescript": "^4.9.5",
+    "cross-env": "^7.0.3"
   },
   "main": "./extension/out/extension.js",
   "packageManager": "pnpm@9.14.4"

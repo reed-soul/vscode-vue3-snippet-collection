@@ -81,11 +81,15 @@ async function main() {
         
         // 7. 提交变更
         execSync('git add .');
-        execSync(`git commit -m "chore: release v${newVersion}"`);
+        execSync(`git commit -m "chore: release v${newVersion}" --no-verify`);
         execSync(`git tag v${newVersion}`);
         execSync('git push && git push --tags');
         
         console.log('All done!');
+        
+        // 在更新版本号之后，生成 changelog
+        console.log('Generating changelog...');
+        execSync('pnpm run changelog', { stdio: 'inherit' });
     } catch (error) {
         console.error('Error:', error);
         process.exit(1);
