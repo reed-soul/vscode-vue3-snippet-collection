@@ -128,6 +128,8 @@ export function activate(context: vscode.ExtensionContext): void {
     });
 
     // 注册代码片段补全提供程序
+    const triggerCharacters = ['v', '3', '@', ':', '-'];
+
     const provider = vscode.languages.registerCompletionItemProvider(
         ['vue', 'typescript', 'javascript'],
         {
@@ -158,7 +160,8 @@ export function activate(context: vscode.ExtensionContext): void {
                     return [];
                 }
             }
-        }
+        },
+        ...triggerCharacters
     );
 
     // 添加新的命令
@@ -191,8 +194,8 @@ export function activate(context: vscode.ExtensionContext): void {
 
 // 辅助函数：检查是否应该触发补全
 function shouldTriggerCompletion(lineText: string, position: number): boolean {
-    const textBeforeCursor = lineText.slice(0, position);
-    return textBeforeCursor.endsWith('v3');
+    const textBeforeCursor = lineText.slice(0, position).trim();
+    return textBeforeCursor.endsWith('v') || textBeforeCursor.includes('v3');
 }
 
 // 修改 getWebviewContent 函数以接受代码片段数据

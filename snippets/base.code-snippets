@@ -1,5 +1,6 @@
 {
   "Vue 3 Setup SFC": {
+    "scope": "vue,typescript,javascript",
     "prefix": "v3setup",
     "body": [
       "<script setup>",
@@ -17,29 +18,5 @@
       "</style>"
     ],
     "description": "Vue 3 Setup SFC 基础模板"
-  },
-  "Vue 3 TypeScript Setup SFC": {
-    "prefix": "v3setup-ts",
-    "body": [
-      "<script setup lang=\"ts\">",
-      "interface Props {",
-      "\t${1:propName}: ${2:string}",
-      "}",
-      "",
-      "const props = defineProps<Props>()",
-      "${3}",
-      "</script>",
-      "",
-      "<template>",
-      "\t<div>",
-      "\t\t${4}",
-      "\t</div>",
-      "</template>",
-      "",
-      "<style scoped>",
-      "${5}",
-      "</style>"
-    ],
-    "description": "Vue 3 TypeScript Setup SFC 模板"
   }
 } 

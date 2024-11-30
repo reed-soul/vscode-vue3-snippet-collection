@@ -19,7 +19,6 @@
     "publish": "vsce publish  --no-dependencies"
   },
   "activationEvents": [
-    "onStartupFinished",
     "onLanguage:vue",
     "onLanguage:typescript",
     "onLanguage:javascript"
