@@ -1,23 +1,25 @@
-# Welcome to your VS Code Extension
+# Vue 3 Snippets Pro - Getting Started
 
-## What's in the folder
+## Features
 
-* This folder contains all of the files necessary for your extension.
-* `package.json` - this is the manifest file that defines the location of the snippet file and specifies the language of the snippets.
-* `snippets/snippets.code-snippets` - the file containing all snippets.
+This extension provides a rich set of snippets for Vue 3 development, including:
+- Vue 3 Core Features
+- Popular UI Frameworks Support
+- TypeScript Integration
+- Best Practices Templates
 
-## Get up and running straight away
+## Available Snippets
 
-* Press `F5` to open a new window with your extension loaded.
-* Create a new file with a file name suffix matching your language.
-* Verify that your snippets are proposed on IntelliSense.
+See [Cheat Sheet](docs/cheatsheet.md) for a complete list of available snippets.
 
-## Make changes
+## Configuration
 
-* You can relaunch the extension from the debug toolbar after making changes to the files listed above.
-* You can also reload (`Ctrl+R` or `Cmd+R` on Mac) the VS Code window with your extension to load your changes.
+See [Configuration Guide](docs/configuration.md) for available settings.
 
-## Install your extension
+## Examples
 
-* To start using your extension with Visual Studio Code copy it into the `<user home>/.vscode/extensions` folder and restart Code.
-* To share your extension with the world, read on https://code.visualstudio.com/docs about publishing an extension.
+See [Examples](docs/examples.md) for detailed usage examples.
+
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md).

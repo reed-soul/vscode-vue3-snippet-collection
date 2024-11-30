@@ -2,7 +2,7 @@
   "name": "vue3-snippets-pro",
   "displayName": "Vue 3 Snippets Pro",
   "description": "Professional Vue 3 Snippets with Composition API and TypeScript support",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publisher": "lushiqiang",
   "author": {
     "name": "lushiqiang",
@@ -16,7 +16,7 @@
     "pretest": "pnpm run compile && pnpm run lint",
     "test": "node ./out/test/runTest.js",
     "package": "vsce package --no-dependencies",
-    "publish": "vsce publish  --no-dependencies"
+    "publish": "vsce package --no-dependencies && vsce publish --no-dependencies"
   },
   "activationEvents": [
     "onLanguage:vue",
@@ -67,6 +67,34 @@
       {
         "language": "typescript",
         "path": "./snippets/typescript.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/element-plus.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/ant-design-vue.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/naive-ui.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/vant.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/vuetify.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/primevue.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/arco.json"
       }
     ],
     "configuration": {

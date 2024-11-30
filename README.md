@@ -26,7 +26,7 @@
 - 💪 **Complete TypeScript Support**: Built-in type hints and type safety
 - 🎯 **Highly Configurable**: Customize code style and coding conventions
 - 📦 **Rich Snippet Collection**: Covers all common Vue 3 functionalities
-- 🎨 **Elegant Code Organization**: Code structure following best practices
+- 🎨 **UI Framework Support**: Includes popular UI frameworks worldwide
 
 ## 📥 Quick Start
 
@@ -39,84 +39,69 @@
 
 Or search for "Vue 3 Snippets Pro" in VS Code Extensions Marketplace.
 
-### Basic Usage
+## 🎯 Snippet Categories
 
-1. Create a new Vue component:
-   - Type `v3setup` and press Tab
-   ```vue
-   <script setup>
-   // Component logic
-   </script>
+### Vue 3 Core
+| Prefix | Description |
+|--------|-------------|
+| `v3setup` | Vue 3 Setup SFC |
+| `v3setup-ts` | TypeScript Setup SFC |
+| `v3ref` | ref reactive variable |
+| `v3reactive` | reactive object |
+| `v3computed` | computed property |
 
-   <template>
-     <div></div>
-   </template>
-   ```
+### UI Frameworks
+#### Element Plus
+| Prefix | Description |
+|--------|-------------|
+| `v3el-search-table` | Search Table Component |
+| `v3el-form` | Form Component |
 
-2. Add reactive variable:
-   - Type `v3ref` and press Tab
-   ```typescript
-   const count = ref(0)
-   ```
+#### Ant Design Vue
+| Prefix | Description |
+|--------|-------------|
+| `v3a-search-table` | Search Table Component |
+| `v3a-form` | Form Component |
 
-[View More Examples...](https://github.com/reed-soul/vscode-vue3-snippet-collection/blob/main/docs/examples.md)
+#### Naive UI
+| Prefix | Description |
+|--------|-------------|
+| `v3n-search-table` | Search Table Component |
+| `v3n-form` | Form Component |
 
-## 🎯 Snippet Cheat Sheet
+#### Vant
+| Prefix | Description |
+|--------|-------------|
+| `v3vant-list` | List Component |
+| `v3vant-form` | Form Component |
 
-### Base Templates
-| Prefix | Description | Example |
-|--------|-------------|---------|
-| `v3setup` | Basic component template | [View Example](#v3setup) |
-| `v3setup-ts` | TypeScript component template | [View Example](#v3setup-ts) |
-
-### Composition API
-| Prefix | Description | Example |
-|--------|-------------|---------|
-| `v3ref` | ref reactive variable | [View Example](#v3ref) |
-| `v3reactive` | reactive object | [View Example](#v3reactive) |
-| `v3computed` | computed property | [View Example](#v3computed) |
+#### International UI Frameworks
+- **Vuetify**: `v3vuetify-table`
+- **PrimeVue**: `v3prime-table`
+- **Arco Design**: `v3a-search-table`
 
 [View Full Cheat Sheet](docs/cheatsheet.md)
 
 ## ⚙️ Configuration
 
-### Code Style Configuration
-
 ```json
 {
   "vue3SnippetsPro.style": {
-    "defaultStyle": "scss",    // Default style language
-    "scopedByDefault": true    // Add scoped by default
+    "defaultStyle": "scss",
+    "scopedByDefault": true
   },
   "vue3SnippetsPro.formatting": {
-    "indentSize": 2,          // Number of spaces for indentation
-    "quotes": "single"        // Quote style
+    "indentSize": 2,
+    "quotes": "single"
   }
 }
 ```
 
 [View Full Configuration Guide](docs/configuration.md)
 
-## 🎯 Pro Tips
+## 🌟 Support
 
-1. **Quick View All Snippets**
-   - Press `Ctrl+Shift+P` / `Cmd+Shift+P`
-   - Type "Vue 3: Show All Available Snippets"
-
-2. **Smart IntelliSense**
-   - Type `v3` to see all available snippets
-   - Each snippet comes with live preview and example
-
-3. **Custom Configuration**
-   - Press `Ctrl+,` / `Cmd+,`
-   - Search for "Vue 3 Snippets Pro"
-   - Adjust settings as needed
-
-[View More Tips](docs/tips.md)
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+If you find this project helpful, please give it a star ⭐️
 
 ## 📝 Changelog
 
@@ -125,11 +110,3 @@ See [CHANGELOG.md](CHANGELOG.md) for release history.
 ## 📄 License
 
 [MIT](LICENSE)
-
-## 🌟 Support
-
-If you find this project helpful, please give it a star ⭐️
-
-## 🤔 FAQ
-
-[View FAQ](docs/faq.md)
