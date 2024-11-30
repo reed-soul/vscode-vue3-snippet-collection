@@ -1,0 +1,57 @@
+{
+  "Vue3 Ref": {
+    "prefix": "v3ref",
+    "body": "const ${1:name} = ref(${2:initialValue})",
+    "description": "Vue 3 ref"
+  },
+  "Vue3 Reactive": {
+    "prefix": "v3reactive",
+    "body": [
+      "const ${1:state} = reactive({",
+      "\t${2:property}: ${3:value}",
+      "})"
+    ],
+    "description": "Vue 3 reactive"
+  },
+  "Vue3 Computed": {
+    "prefix": "v3computed",
+    "body": [
+      "const ${1:computedValue} = computed(() => {",
+      "\treturn ${2:value}",
+      "})"
+    ],
+    "description": "Vue 3 computed"
+  },
+  "Vue3 Watch": {
+    "prefix": "v3watch",
+    "body": [
+      "watch(${1:source}, (newValue, oldValue) => {",
+      "\t${2:// 处理逻辑}",
+      "}${3:, { deep: true }})"
+    ],
+    "description": "Vue 3 watch"
+  },
+  "Vue3 Watch Effect": {
+    "prefix": "v3watcheffect",
+    "body": [
+      "watchEffect(() => {",
+      "\t${1:// 副作用逻辑}",
+      "})"
+    ],
+    "description": "Vue 3 watchEffect"
+  },
+  "Vue3 Provide": {
+    "prefix": "v3provide",
+    "body": [
+      "provide('${1:key}', ${2:value})"
+    ],
+    "description": "Vue 3 provide"
+  },
+  "Vue3 Inject": {
+    "prefix": "v3inject",
+    "body": [
+      "const ${1:value} = inject('${2:key}'${3:, defaultValue})"
+    ],
+    "description": "Vue 3 inject"
+  }
+} 

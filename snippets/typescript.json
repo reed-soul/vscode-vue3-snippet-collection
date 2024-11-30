@@ -1,0 +1,57 @@
+{
+  "Vue3 Define Props": {
+    "prefix": "v3props",
+    "body": [
+      "interface Props {",
+      "\t${1:propName}: ${2:string}",
+      "\t${3:optional}?: ${4:number}",
+      "}",
+      "",
+      "const props = defineProps<Props>()"
+    ],
+    "description": "Vue 3 defineProps with TypeScript"
+  },
+  "Vue3 Define Emits": {
+    "prefix": "v3emits",
+    "body": [
+      "interface Emits {",
+      "\t(e: '${1:update}', value: ${2:string}): void",
+      "\t(e: '${3:delete}', id: ${4:number}): void",
+      "}",
+      "",
+      "const emit = defineEmits<Emits>()"
+    ],
+    "description": "Vue 3 defineEmits with TypeScript"
+  },
+  "Vue3 Composable": {
+    "prefix": "v3composable",
+    "body": [
+      "export function use${1:Feature}(${2:options}: ${3:Options}) {",
+      "\t// 状态",
+      "\tconst ${4:state} = ref<${5:Type}>(${6:initialValue})",
+      "",
+      "\t// 计算属性",
+      "\tconst ${7:computed} = computed(() => {",
+      "\t\treturn ${8:value}",
+      "\t})",
+      "",
+      "\t// 方法",
+      "\tfunction ${9:method}(${10:param}: ${11:Type}) {",
+      "\t\t${12:// 实现逻辑}",
+      "\t}",
+      "",
+      "\t// 生命周期",
+      "\tonMounted(() => {",
+      "\t\t${13:// 初始化逻辑}",
+      "\t})",
+      "",
+      "\treturn {",
+      "\t\t${4:state},",
+      "\t\t${7:computed},",
+      "\t\t${9:method}",
+      "\t}",
+      "}"
+    ],
+    "description": "Vue 3 Composable with TypeScript"
+  }
+} 

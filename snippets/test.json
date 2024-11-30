@@ -1,0 +1,31 @@
+{
+  "Vue3 Vitest Component Test": {
+    "prefix": "v3test",
+    "body": [
+      "import { describe, it, expect } from 'vitest'",
+      "import { mount } from '@vue/test-utils'",
+      "import ${1:ComponentName} from './${1:ComponentName}.vue'",
+      "",
+      "describe('${1:ComponentName}', () => {",
+      "\tit('renders properly', () => {",
+      "\t\tconst wrapper = mount(${1:ComponentName}, {",
+      "\t\t\tprops: {",
+      "\t\t\t\t${2:propName}: ${3:value}",
+      "\t\t\t}",
+      "\t\t})",
+      "",
+      "\t\texpect(wrapper.text()).toContain('${4:expected text}')",
+      "\t})",
+      "",
+      "\tit('emits update event', async () => {",
+      "\t\tconst wrapper = mount(${1:ComponentName})",
+      "",
+      "\t\tawait wrapper.find('${5:button}').trigger('click')",
+      "",
+      "\t\texpect(wrapper.emitted()).toHaveProperty('${6:update}')",
+      "\t})",
+      "})"
+    ],
+    "description": "创建 Vue 组件测试"
+  }
+} 

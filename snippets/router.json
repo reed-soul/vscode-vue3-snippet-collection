@@ -1,0 +1,57 @@
+{
+  "Vue3 Router Setup": {
+    "prefix": "v3router",
+    "body": [
+      "import { createRouter, createWebHistory } from 'vue-router'",
+      "",
+      "const routes = [",
+      "\t{",
+      "\t\tpath: '/',",
+      "\t\tname: 'Home',",
+      "\t\tcomponent: () => import('./views/Home.vue')",
+      "\t},",
+      "\t{",
+      "\t\tpath: '/${1:path}',",
+      "\t\tname: '${2:name}',",
+      "\t\tcomponent: () => import('./views/${3:component}.vue')",
+      "\t}",
+      "]",
+      "",
+      "const router = createRouter({",
+      "\thistory: createWebHistory(),",
+      "\troutes",
+      "})",
+      "",
+      "export default router"
+    ],
+    "description": "创建 Vue Router 实例"
+  },
+  "Vue3 Router Guard": {
+    "prefix": "v3guard",
+    "body": [
+      "router.beforeEach(async (to, from) => {",
+      "\t// 检查认证",
+      "\tif (to.meta.requiresAuth && !isAuthenticated()) {",
+      "\t\t// 重定向到登录页",
+      "\t\treturn { name: 'Login', query: { redirect: to.fullPath } }",
+      "\t}",
+      "})"
+    ],
+    "description": "添加 Vue Router 导航守卫"
+  },
+  "Vue3 useRouter": {
+    "prefix": "v3userouter",
+    "body": [
+      "const router = useRouter()",
+      "const route = useRoute()",
+      "",
+      "function ${1:navigate}() {",
+      "\trouter.push({",
+      "\t\tname: '${2:RouteName}',",
+      "\t\tparams: { ${3:id}: ${4:value} }",
+      "\t})",
+      "}"
+    ],
+    "description": "使用 Vue Router Composition API"
+  }
+} 

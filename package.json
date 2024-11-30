@@ -2,7 +2,7 @@
   "name": "vue3-snippets-pro",
   "displayName": "Vue 3 Snippets Pro",
   "description": "Professional Vue 3 Snippets with Composition API and TypeScript support",
-  "version": "1.0.12",
+  "version": "1.0.3",
   "publisher": "lushiqiang",
   "author": {
     "name": "lushiqiang",
@@ -53,51 +53,20 @@
   "contributes": {
     "snippets": [
       {
-        "language": [
-          "vue",
-          "typescript",
-          "javascript",
-          "html",
-          "jsx",
-          "tsx"
-        ],
-        "path": "./snippets/base.code-snippets"
+        "language": "vue",
+        "path": "./snippets/vue.json"
       },
       {
-        "language": [
-          "vue",
-          "typescript",
-          "javascript"
-        ],
-        "path": "./snippets/composition.code-snippets"
+        "language": "vue-html",
+        "path": "./snippets/vue-html.json"
       },
       {
-        "language": [
-          "vue"
-        ],
-        "path": "./snippets/lifecycle.code-snippets"
+        "language": "javascript",
+        "path": "./snippets/javascript.json"
       },
       {
-        "language": [
-          "vue"
-        ],
-        "path": "./snippets/directives.code-snippets"
-      },
-      {
-        "language": [
-          "vue",
-          "typescript",
-          "javascript"
-        ],
-        "path": "./snippets/pinia.code-snippets"
-      },
-      {
-        "language": [
-          "vue",
-          "typescript",
-          "javascript"
-        ],
-        "path": "./snippets/composables.code-snippets"
+        "language": "typescript",
+        "path": "./snippets/typescript.json"
       }
     ],
     "configuration": {

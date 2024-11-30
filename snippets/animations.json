@@ -1,0 +1,33 @@
+{
+  "Vue3 Transition": {
+    "prefix": "v3transition",
+    "body": [
+      "<Transition",
+      "\tname=\"${1:fade}\"",
+      "\t@before-enter=\"${2:onBeforeEnter}\"",
+      "\t@enter=\"${3:onEnter}\"",
+      "\t@after-enter=\"${4:onAfterEnter}\"",
+      "\t@before-leave=\"${5:onBeforeLeave}\"",
+      "\t@leave=\"${6:onLeave}\"",
+      "\t@after-leave=\"${7:onAfterLeave}\"",
+      ">",
+      "\t<div v-if=\"${8:show}\">",
+      "\t\t${9:content}",
+      "\t</div>",
+      "</Transition>",
+      "",
+      "<style scoped>",
+      ".${1:fade}-enter-active,",
+      ".${1:fade}-leave-active {",
+      "\ttransition: opacity 0.5s ease;",
+      "}",
+      "",
+      ".${1:fade}-enter-from,",
+      ".${1:fade}-leave-to {",
+      "\topacity: 0;",
+      "}",
+      "</style>"
+    ],
+    "description": "Vue 3 Transition 组件模板"
+  }
+} 
