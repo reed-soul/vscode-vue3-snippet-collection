@@ -2,7 +2,7 @@
   "name": "vue3-snippets-pro",
   "displayName": "Vue 3 Snippets Pro",
   "description": "Professional Vue 3 Snippets with Composition API and TypeScript support",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "publisher": "lushiqiang",
   "author": {
     "name": "lushiqiang",
@@ -44,12 +44,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/reed-soul/vscode-vue3-snippet-collection"
+    "url": "https://github.com/reed-soul/vscode-vue3-snippets-pro"
   },
   "bugs": {
-    "url": "https://github.com/reed-soul/vscode-vue3-snippet-collection/issues"
+    "url": "https://github.com/reed-soul/vscode-vue3-snippets-pro/issues"
   },
-  "homepage": "https://github.com/reed-soul/vscode-vue3-snippet-collection#readme",
+  "homepage": "https://github.com/reed-soul/vscode-vue3-snippets-pro#readme",
   "contributes": {
     "snippets": [
       {
