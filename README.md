@@ -5,6 +5,10 @@
 </p>
 
 <p align="center">
+  <img src="extension/images/preview.gif" alt="Vue 3 Snippets Pro Preview" width="720">
+</p>
+
+<p align="center">
   <a href="https://marketplace.visualstudio.com/items?itemName=lushiqiang.vue3-snippets-pro">
     <img src="https://img.shields.io/visual-studio-marketplace/v/lushiqiang.vue3-snippets-pro.svg?color=blue&amp;label=VS%20Code%20Marketplace&logo=visual-studio-code" alt="Visual Studio Marketplace Version">
   </a>
