@@ -2,18 +2,18 @@
   "name": "vue3-snippets-pro",
   "displayName": "Vue 3 Snippets Pro",
   "description": "Professional Vue 3 Snippets with Composition API and TypeScript support",
-  "version": "1.0.1",
+  "version": "1.0.12",
   "publisher": "lushiqiang",
   "author": {
     "name": "lushiqiang",
     "email": "lsqup0702@hotmail.com"
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "pnpm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
-    "pretest": "npm run compile && npm run lint",
+    "pretest": "pnpm run compile && pnpm run lint",
     "test": "node ./out/test/runTest.js",
     "package": "vsce package --no-dependencies",
     "publish": "vsce publish  --no-dependencies"

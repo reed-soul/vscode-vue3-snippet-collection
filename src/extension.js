@@ -114,6 +114,7 @@ function activate(context) {
         panel.webview.html = getWebviewContent(snippets);
     });
     // 注册代码片段补全提供程序
+    const triggerCharacters = ['v', '3', '@', ':', '-'];
     const provider = vscode.languages.registerCompletionItemProvider(['vue', 'typescript', 'javascript'], {
         async provideCompletionItems(document, position) {
             try {
@@ -140,7 +141,7 @@ function activate(context) {
                 return [];
             }
         }
-    });
+    }, ...triggerCharacters);
     // 添加新的命令
     context.subscriptions.push(vscode.commands.registerCommand('vue3snippets.showStats', async () => {
         const report = analytics_1.SnippetAnalytics.getReport();
@@ -159,8 +160,8 @@ function activate(context) {
 exports.activate = activate;
 // 辅助函数：检查是否应该触发补全
 function shouldTriggerCompletion(lineText, position) {
-    const textBeforeCursor = lineText.slice(0, position);
-    return textBeforeCursor.endsWith('v3');
+    const textBeforeCursor = lineText.slice(0, position).trim();
+    return textBeforeCursor.endsWith('v') || textBeforeCursor.includes('v3');
 }
 // 修改 getWebviewContent 函数以接受代码片段数据
 function getWebviewContent(snippets = []) {
