@@ -21,7 +21,7 @@ importers:
         specifier: ^8.1.0
         version: 8.1.0
       '@types/mocha':
-        specifier: ^10.0.6
+        specifier: ^10.x.x
         version: 10.0.10
       '@types/node':
         specifier: ^20.0.0
@@ -57,7 +57,7 @@ importers:
         specifier: ^8.0.0
         version: 8.0.3
       mocha:
-        specifier: ^10.2.0
+        specifier: ^10.x.x
         version: 10.8.2
       rimraf:
         specifier: ^5.0.5
