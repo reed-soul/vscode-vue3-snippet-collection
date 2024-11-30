@@ -28,5 +28,5 @@
     "node": true,
     "es6": true
   },
-  "ignorePatterns": ["out", "dist", "**/*.d.ts"]
+  "ignorePatterns": ["extension/out", "dist", "**/*.d.ts"]
 } 

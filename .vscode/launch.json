@@ -12,11 +12,11 @@
 			"runtimeExecutable": "${execPath}",
 			"args": [
 				"--extensionDevelopmentPath=${workspaceFolder}",
-				"--extensionTestsPath=${workspaceFolder}/out/test/suite/index",
+				"--extensionTestsPath=${workspaceFolder}/extension/out/test/suite/index",
 				"${workspaceFolder}/test-workspace"
 			],
 			"outFiles": [
-				"${workspaceFolder}/out/**/*.js"
+				"${workspaceFolder}/extension/out/**/*.js"
 			],
 			"preLaunchTask": "npm: compile"
 		}

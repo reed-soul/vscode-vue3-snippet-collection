@@ -1,7 +1,7 @@
 # Vue 3 Snippets Pro
 
 <p align="center">
-  <img src="images/logo.png" alt="Vue 3 Snippets Pro" width="128" height="128">
+  <img src="extension/images/logo.png" alt="Vue 3 Snippets Pro" width="128" height="128">
 </p>
 
 <p align="center">

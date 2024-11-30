@@ -12,9 +12,9 @@
     "vscode:prepublish": "pnpm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "lint": "eslint \"extension/src/**/*.{ts,tsx}\"",
     "pretest": "pnpm run compile && pnpm run lint",
-    "test": "node ./out/test/runTest.js",
+    "test": "node ./extension/out/test/runTest.js",
     "package": "vsce package --no-dependencies",
     "publish": "vsce package --no-dependencies && vsce publish --no-dependencies"
   },
@@ -37,7 +37,7 @@
     "typescript",
     "snippets"
   ],
-  "icon": "images/logo.png",
+  "icon": "extension/images/logo.png",
   "galleryBanner": {
     "color": "#41B883",
     "theme": "dark"
@@ -54,47 +54,47 @@
     "snippets": [
       {
         "language": "vue",
-        "path": "./snippets/vue.json"
+        "path": "./extension/snippets/vue.json"
       },
       {
         "language": "vue-html",
-        "path": "./snippets/vue-html.json"
+        "path": "./extension/snippets/vue-html.json"
       },
       {
         "language": "javascript",
-        "path": "./snippets/javascript.json"
+        "path": "./extension/snippets/javascript.json"
       },
       {
         "language": "typescript",
-        "path": "./snippets/typescript.json"
+        "path": "./extension/snippets/typescript.json"
       },
       {
         "language": "vue",
-        "path": "./snippets/element-plus.json"
+        "path": "./extension/snippets/element-plus.json"
       },
       {
         "language": "vue",
-        "path": "./snippets/ant-design-vue.json"
+        "path": "./extension/snippets/ant-design-vue.json"
       },
       {
         "language": "vue",
-        "path": "./snippets/naive-ui.json"
+        "path": "./extension/snippets/naive-ui.json"
       },
       {
         "language": "vue",
-        "path": "./snippets/vant.json"
+        "path": "./extension/snippets/vant.json"
       },
       {
         "language": "vue",
-        "path": "./snippets/vuetify.json"
+        "path": "./extension/snippets/vuetify.json"
       },
       {
         "language": "vue",
-        "path": "./snippets/primevue.json"
+        "path": "./extension/snippets/primevue.json"
       },
       {
         "language": "vue",
-        "path": "./snippets/arco.json"
+        "path": "./extension/snippets/arco.json"
       }
     ],
     "configuration": {
@@ -301,6 +301,6 @@
     "mocha": "^10.2.0",
     "typescript": "^4.9.5"
   },
-  "main": "./out/extension.js",
+  "main": "./extension/out/extension.js",
   "packageManager": "pnpm@9.14.4"
 }
