@@ -128,3 +128,15 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# VSCode extension files
+*.vsix
+
+# VSCode test coverage
+.vscode-test/
+
+# VSCode extension output
+extension/out/
+
+# VSCode coverage
+coverage/

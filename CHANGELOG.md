@@ -1,5 +1,15 @@
 # Change Log
 
+## [1.1.1] - 2024-11-30
+### Added
+- 
+
+### Changed
+- 
+
+### Fixed
+- 
+
 ## [1.0.3] - 2024-03-xx
 ### Added
 - Support for major UI frameworks (Element Plus, Ant Design Vue, etc.)
