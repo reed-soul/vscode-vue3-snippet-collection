@@ -136,7 +136,7 @@ dist
 .vscode-test/
 
 # VSCode extension output
-extension/out/
+out/
 
 # VSCode coverage
 coverage/

@@ -28,7 +28,7 @@ function updateChangelog(version: string) {
 
 // 清理构建文件
 function clean() {
-    execSync('pnpm run clean');
+    execSync('rimraf *.vsix out dist');
 }
 
 // 构建项目
