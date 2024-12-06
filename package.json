@@ -75,6 +75,14 @@
       },
       {
         "language": "vue",
+        "path": "./extension/snippets/javascript.json"
+      },
+      {
+        "language": "vue",
+        "path": "./extension/snippets/typescript.json"
+      },
+      {
+        "language": "vue",
         "path": "./extension/snippets/element-plus.json"
       },
       {
@@ -100,6 +108,94 @@
       {
         "language": "vue",
         "path": "./extension/snippets/arco.json"
+      },
+      {
+        "language": "vue",
+        "path": "./extension/snippets/components.json"
+      },
+      {
+        "language": "vue",
+        "path": "./extension/snippets/animations.json"
+      },
+      {
+        "language": "vue",
+        "path": "./extension/snippets/error-handling.json"
+      },
+      {
+        "language": "vue",
+        "path": "./extension/snippets/forms.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./extension/snippets/vueuse.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./extension/snippets/vueuse.json"
+      },
+      {
+        "language": "vue",
+        "path": "./extension/snippets/vueuse.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./extension/snippets/pinia.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./extension/snippets/pinia.json"
+      },
+      {
+        "language": "vue",
+        "path": "./extension/snippets/pinia.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./extension/snippets/router.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./extension/snippets/router.json"
+      },
+      {
+        "language": "vue",
+        "path": "./extension/snippets/router.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./extension/snippets/i18n.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./extension/snippets/i18n.json"
+      },
+      {
+        "language": "vue",
+        "path": "./extension/snippets/i18n.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./extension/snippets/test.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./extension/snippets/test.json"
+      },
+      {
+        "language": "vue",
+        "path": "./extension/snippets/test.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./extension/snippets/performance.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./extension/snippets/performance.json"
+      },
+      {
+        "language": "vue",
+        "path": "./extension/snippets/performance.json"
       }
     ],
     "configuration": {

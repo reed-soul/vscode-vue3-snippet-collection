@@ -42,6 +42,7 @@
     "prefix": "v3setup-full",
     "body": [
       "<script setup lang=\"ts\">",
+      "import { ref, computed } from 'vue'",
       "interface Props {",
       "\t${1:propName}: ${2:string}",
       "}",
